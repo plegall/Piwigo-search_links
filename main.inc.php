@@ -88,6 +88,7 @@ function search_links_init_fake_search()
   if (isset($_GET['word']))
   {
     $_POST['search_allwords'] = $_GET['word'];
+    $_POST['fields'] = array('file', 'name', 'comment');
 
     $is_search_link = true;
   }

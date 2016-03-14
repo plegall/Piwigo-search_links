@@ -1,0 +1,1 @@
+Perform a search with a link, no need to use the search form.

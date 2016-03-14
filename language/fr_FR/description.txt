@@ -1,0 +1,1 @@
+Lancer une recherche juste avec un lien, sans passer par le formulaire de recherche

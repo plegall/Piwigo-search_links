@@ -25,6 +25,8 @@ add_event_handler('init', 'search_links_init_fake_search');
 
 function search_links_init_fake_search()
 {
+  global $conf;
+
   // search.php?mindate=2011-01-15&maxdate=2011-01-31&album=23
   //
   // what does search.php expects in $_POST ?
@@ -107,6 +109,17 @@ function search_links_init_fake_search()
       if (count($_POST['fields']) == 0)
       {
         die("invalid fields");
+      }
+    }
+    elseif (isset($conf['search_links_fields']) and is_array($conf['search_links_fields']))
+    {
+      foreach ($conf['search_links_fields'] as $field)
+      {
+        $field = trim($field);
+        if (in_array($field, $basic_fields))
+        {
+          $_POST['fields'][] = $field;
+        }
       }
     }
     else

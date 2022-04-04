@@ -1,0 +1,1 @@
+Udfør en søgning med et link, uden behov for at anvende søgeformular.

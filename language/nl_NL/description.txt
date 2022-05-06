@@ -1,0 +1,2 @@
+Perform a search with a link, no need to use the search form.
+Voer een zoekopdracht uit met een link. Je hoeft het zoekformulier niet te gebruiken.

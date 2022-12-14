@@ -1,0 +1,1 @@
+Arama formu kullanmanıza gerek olmadan bağlantı ile arama yapın.

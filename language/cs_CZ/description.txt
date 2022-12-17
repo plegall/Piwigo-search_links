@@ -1,0 +1,1 @@
+Vyhledávání pomocí odkazu, není třeba používat vyhledávací formulář.

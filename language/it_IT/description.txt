@@ -1,0 +1,1 @@
+Effettua una ricerca attraverso un link, senza utilizzare il modulo di ricerca.

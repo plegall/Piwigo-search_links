@@ -20,7 +20,6 @@ defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
 // | Add event handlers                                                    |
 // +-----------------------------------------------------------------------+
 
-// publish scheduled photos
 add_event_handler('init', 'search_links_init_fake_search');
 
 function search_links_init_fake_search()
@@ -55,6 +54,7 @@ function search_links_init_fake_search()
 
   $is_search_link = false;
 
+/*
   if (isset($_GET['mindate']))
   {
     $mindate_unixtime = strtotime($_GET['mindate']);
@@ -78,19 +78,17 @@ function search_links_init_fake_search()
 
     $is_search_link = true;
   }
-
+*/
   if (isset($_GET['album']) and is_numeric($_GET['album']))
   {
-    $_POST['cat'] = array($_GET['album']);
-    $_POST['subcats-included'] = 1;
-
-    $is_search_link = true;
+    $_GET['cat_id'] = $_GET['album'];
   }
 
   if (isset($_GET['word']))
   {
-    $_POST['search_allwords'] = $_GET['word'];
+    $_GET['q'] = $_GET['word'];
 
+/*
     // on which fields?
     $basic_fields = array('file', 'name', 'comment');
     $_POST['fields'] = array();
@@ -126,14 +124,7 @@ function search_links_init_fake_search()
     {
       $_POST['fields'] = $basic_fields;
     }
-
-    $is_search_link = true;
-  }
-
-  if ($is_search_link)
-  {
-    $_POST['search_author'] = false;
-    $_POST['submit'] = 'Submit';
+*/
   }
 }
 

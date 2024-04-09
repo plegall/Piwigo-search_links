@@ -1,0 +1,1 @@
+Realitza una cerca amb un enllaç, sense necessitat de fer servir el formulari de cerca.
